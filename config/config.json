@@ -1,8 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exampledb",
+
+    "password": "",
+    "database": "fridgeraider_db",
+
     "host": "localhost",
     "dialect": "mysql"
   },
