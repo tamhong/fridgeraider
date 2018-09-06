@@ -1,26 +1,56 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+
+
+  app.get("/api/persons", function(req, res) {
+    db.Person.findAll({}).then(function(dbPerson) {
+      res.json(dbPerson);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+
+  app.post("/api/persons", function(req, res) {
+    db.Person.create(req.body).then(function(dbPerson) {
+      res.json(dbPerson);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(
-      dbExample
+
+  app.delete("/api/persons/:id", function(req, res) {
+    db.Person.destroy({ where: { id: req.params.id } }).then(function(
+      dbPerson
     ) {
-      res.json(dbExample);
+      res.json(dbPerson);
     });
   });
+
+  app.get("/api/items", function(req, res) {
+    db.Items.findAll({}).then(function(dbItem) {
+      res.json(dbItem);
+    });
+  });
+
+  app.post("/api/items", function(req, res) {
+    db.Items.create(req.body).then(function(dbItem) {
+      res.json(dbItem);
+    });
+  });
+
+  app.delete("/api/items/:id", function(req, res) {
+    db.Items.destroy({ where: { id: req.params.id } }).then(function(
+      dbItem
+    ) {
+      res.json(dbItem);
+    });
+  });
+
+  app.put("/api/items/:id", function(req, res) {
+    db.Items.update(req.body, {where:{ id: req.params.id}}).then(function(dbItem) {
+      res.json(dbItem);
+    });
+  });
+
+
+
 };
