@@ -1,0 +1,85 @@
+/* body {
+    background-image: url("../images/background.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-opacity: 50%;
+} */
+
+h1 {
+    font-family: 'Cookie', cursive;
+    color: white;
+    font-size: 80px;
+}
+
+.container {
+    display: block;
+    position: relative;
+  }
+  
+  .container::after {
+    content: "";
+    background: url(../images/background-2.jpg);
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    background-size: 100%;
+  }
+
+.grid-x {
+    height: 250px;
+}
+
+#fit {
+    height: 80px;
+}
+
+.custom {
+    background-color: #de6c72;
+    border-radius: 5px;
+    color: white;
+}
+
+.custom:hover{
+    background-color: #de6c72;
+    opacity: 0.8;
+}
+
+.su-fit {
+    height: 150px;
+}
+
+.su-fit-2 {
+    height: 180px;
+}
+
+.li-fit {
+    height:150px;
+}
+
+.li-fit-2 {
+    height:57px;
+
+}
+
+#login-title {
+    height: 125px;
+}
+
+#spacing {
+    height: 20px;
+}
+
+.card {
+    border-radius: 5px;
+}
+
+.callout {
+    overflow-y: auto;
+    height: 125px;
+}
+
+
