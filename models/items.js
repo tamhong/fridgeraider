@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
   		allowNull: false,
   		autoIncrement: true
   	},
-  	item_name: {
+  	itemName: {
   		type: DataTypes.STRING,
   		allowNull: false,
   		required: true
@@ -16,17 +16,17 @@ module.exports = function(sequelize, DataTypes) {
   		allowNull: false,
   		required: true
   	},
-  	exp_date: {
+  	expDate: {
   		type: DataTypes.DATE,
   		allowNull: false,
   		required: true
   	},
-  	created_at: {
+  	createdAt: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW
     },
-    has_expired: {
+    hasExpired: {
     	type: DataTypes.BOOLEAN,
     	allowNull: false,
     	required: true

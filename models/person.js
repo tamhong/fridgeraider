@@ -16,11 +16,11 @@ module.exports = function(sequelize, DataTypes) {
   		allowNull: false,
   		required: true
   	},
-  	phone_number: {
-  		type: DataTypes.INTEGER,
+  	phoneNumber: {
+  		type: DataTypes.STRING,
   		allowNull: false
   	},
-  	fridge_name: {
+  	fridgeName: {
   		type: DataTypes.STRING,
   		allowNull: false,
   		required: true
@@ -32,7 +32,6 @@ module.exports = function(sequelize, DataTypes) {
 
 
   Person.associate = function(models) {
-
     Person.hasMany(models.Items, {
       onDelete: "cascade"
     });
