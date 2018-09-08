@@ -12,7 +12,13 @@
   
   <body>
 
-    <div class = "container">
+    <div class = "background"></div>
+
+    <div class = "container-2">
+
+        <ul class = "menu align-right">
+            <li><a id = "makeRecipe" href="#">Make a recipe >></a></li>
+        </ul>
 
         <div class= "grid-container">
 
@@ -51,7 +57,43 @@
 
             </div>
 
-            <div class = "cell medium-8">add item</div>
+            <div class = "cell medium-3"></div>
+
+            <div class = "cell medium-5">
+                    <div class="card" style="width: 400px;">
+                        <div class="card-divider">
+                            Add an item!
+                        </div>
+                        <div class="card-section">
+                            <form>
+                                <label>Item Name 
+                                    <input type = "text" placeholder = "Lettuce">
+                                </label>
+
+                                <label>Expiration Date 
+                                    <input type = "date" placeholder = "12/5/2018">
+                                </label>
+
+                                <fieldset class = "cell large-5">
+                                    <legend>Item Type</legend>
+                                    <div class = "text-center">
+                                        <input type ="radio" name = "food-type" value = "produce" id ="typeProduce" required> <label for ="typeProduce">Produce</label>
+                                        <input type ="radio" name = "food-type" value = "meat" id ="typeMeat" required> <label for ="typeMeat">Meat</label>
+                                        <input type ="radio" name = "food-type" value = "other" id ="typeOther" required> <label for ="typeOther">Other</label><br><br>
+                                    </div>
+                                </fieldset>
+
+                                <div class = "text-center">
+
+                                    <button id = "addItem" type = "button" class = "button"> Add! </button>
+
+                                </div>
+
+                                
+                            </form>
+                        </div>
+                    </div>
+            </div>
 
         </div>
 
@@ -62,6 +104,8 @@
 
 
     </div>  
+
+    </div>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
