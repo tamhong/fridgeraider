@@ -3,21 +3,33 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+    // db.Items.findAll({}).then(function(dbItems) {
+    res.render("index");
+  });
+  app.get("/login", function(req, res) {
+    // db.Items.findAll({}).then(function(dbItems) {
+    res.render("login");
   });
 
+  app.get("/signup", function(req, res) {
+    // db.Items.findAll({}).then(function(dbItems) {
+    res.render("signup");
+  });
+
+  app.get("/recipe", function(req, res) {
+    // db.Items.findAll({}).then(function(dbItems) {
+    res.render("recipe");
+  });
+
+  app.get("/fridge", function(req, res) {
+    // db.Items.findAll({}).then(function(dbItems) {
+    res.render("fridge");
+  });
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
+  app.get("/items/:id", function(req, res) {
+    db.Items.findOne({ where: { id: req.params.id } }).then(function(dbItems) {
       res.render("example", {
-        example: dbExample
+        example: dbItems
       });
     });
   });
