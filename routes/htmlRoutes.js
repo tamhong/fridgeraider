@@ -22,9 +22,9 @@ module.exports = function(app) {
   });
 
   app.get("/fridge", function(req, res) {
-    // db.Items.findAll({}).then(function(dbItems) {
     res.render("fridge");
   });
+  
   // Load example page and pass in an example by id
   app.get("/items/:id", function(req, res) {
     db.Items.findOne({ where: { id: req.params.id } }).then(function(dbItems) {

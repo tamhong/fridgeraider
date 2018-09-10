@@ -30,7 +30,8 @@ module.exports = function (sequelize, DataTypes) {
 			hasExpired: {
 				type: DataTypes.BOOLEAN,
 				allowNull: false,
-				required: true
+				required: true,
+				defaultValue: false
 			}
 		}, {
 
