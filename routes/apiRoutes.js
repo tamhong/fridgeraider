@@ -21,6 +21,43 @@ module.exports = function(app) {
     });
   });
 
+  //================================================================================//
+
+  app.get("/api/items/:username", function (req, res) {
+
+
+    db.Person.findOne({
+      where: {username: req.params.username },
+      attributes: ['id']}).then(
+        function(dbPerson) {
+          db.Items.findAll({
+            where: { PersonId : dbPerson.id}
+          }).then(
+            function(dbItems) {
+              res.json(dbItems);
+            }
+          )
+        }
+      );
+    // let userId = db.Person.findOne({where: { username: req.params.username }, attributes: ['id'] });
+
+    // console.log(userId);
+
+    // db.Items.findAll({ where: { PersonId: userId} }).then(function(dbItems) {
+    //   res.json(dbItems)
+    // });
+
+  });
+
+
+  app.post("/api/items/:username", function(req, res) {
+    db.Items.create(req.body).then(function(dbItem) {
+      res.json(dbItem);
+    });
+  });
+
+  //================================================================================//
+
   app.get("/api/items", function(req, res) {
     db.Items.findAll({}).then(function(dbItem) {
       res.json(dbItem);

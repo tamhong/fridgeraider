@@ -15,31 +15,14 @@
                 <div class = "cell medium-4">
 
                     <div class="callout">
-                        <h5>Produce</h5>
+                        <h5>Items</h5>
                         <ul>
                             <li>Item</li>
                             <li>Item</li>
                             <li>Item</li>
                         </ul>
                     </div>
-
-                    <div class="callout">
-                        <h5>Meat</h5>
-                        <ul>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                        </ul>
-                    </div>
-
-                    <div class="callout">
-                        <h5>Other</h5>
-                        <ul>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                        </ul>
-                    </div>
+                    
 
             </div>
 
@@ -51,27 +34,18 @@
                             Add an item!
                         </div>
                         <div class="card-section">
-                            <form>
+                            <form id = "addItemForm">
                                 <label>Item Name 
-                                    <input type = "text" placeholder = "Lettuce">
+                                    <input id = "itemName" type = "text" placeholder = "Lettuce">
                                 </label>
 
                                 <label>Expiration Date 
-                                    <input type = "date" placeholder = "12/5/2018">
+                                    <input id = "expDate" type = "date" placeholder = "12/5/2018">
                                 </label>
-
-                                <fieldset class = "cell large-5">
-                                    <legend>Item Type</legend>
-                                    <div class = "text-center">
-                                        <input type ="radio" name = "food-type" value = "produce" id ="typeProduce" required> <label for ="typeProduce">Produce</label>
-                                        <input type ="radio" name = "food-type" value = "meat" id ="typeMeat" required> <label for ="typeMeat">Meat</label>
-                                        <input type ="radio" name = "food-type" value = "other" id ="typeOther" required> <label for ="typeOther">Other</label><br><br>
-                                    </div>
-                                </fieldset>
 
                                 <div class = "text-center">
 
-                                    <button id = "addItem" type = "button" class = "button"> Add! </button>
+                                    <button id = "addItem" type = "submit" class = "button"> Add! </button>
 
                                 </div>
 
