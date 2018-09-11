@@ -21,18 +21,32 @@ module.exports = function(app) {
     res.render("recipe");
   });
 
-  app.get("/fridge", function(req, res) {
-    res.render("fridge");
+  app.get("/fridge/:username", function(req, res) {
+    var user = req.params.username;
+
+    db.Person.findOne({
+      where: {username: req.params.username },
+      attributes: ['id']}).then(
+        function(dbPerson) {
+          db.Items.findAll({
+            where: { PersonId : dbPerson.id}
+          }).then(
+            function(dbItems) {
+              res.render("fridge", dbItems);
+            }
+          )
+        }
+      );
   });
   
   // Load example page and pass in an example by id
-  app.get("/items/:id", function(req, res) {
-    db.Items.findOne({ where: { id: req.params.id } }).then(function(dbItems) {
-      res.render("example", {
-        example: dbItems
-      });
-    });
-  });
+  // app.get("/items/:id", function(req, res) {
+  //   db.Items.findOne({ where: { id: req.params.id } }).then(function(dbItems) {
+  //     res.render("example", {
+  //       example: dbItems
+  //     });
+  //   });
+  // });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

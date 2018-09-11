@@ -1,12 +1,17 @@
 $(function() {
-    $("#loginForm").submit(function(event) {
+    $("#loginButton").on("click", function(event) {
 
-        event.preventDefault()
+        event.preventDefault();
 
         var username = $("#usernameLi").val().trim();
         var fridgename = $("#fridgenameLi").val().trim();
 
-        $("#loginButton").attr("href", "/fridge/" + username);
+        // $("#loginButton").attr("href", "/fridge/" + username);
+        // $("#loginButton").trigger("click");
+
+        $.get("/fridge/" + username, function (data) {
+            console.log (data);
+        });
 
 
     });
