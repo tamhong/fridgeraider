@@ -5,9 +5,29 @@
 
       <div class = "grid-x">
         <div class = "cell large-12 text-center">
+
+        <!--Login Modal-->
+
+        <div class="reveal text-center" id="loginModal" data-reveal>
+
+            <h1 style = "color:black">open your fridge.</h1>
+            
+            <form id = "loginForm">
+
+                <input id = "usernameLi" class = "login" type = "text" placeholder= "Username, ie. johndoe6">
+                <input id = "fridgenameLi" class = "login" type = "text" placeholder= "Fridgename, ie. doe-family">
+
+                <button id = "loginButton" class="button custom">Log in</button>
+
+            </form>
+
+        </div>
+
+        <!-- End Login Modal-->
+
           <h1>fridgeraider.</h1>
           <a href="/signup" class="button custom">Sign up</a>
-          <a href="/login" class="button custom">Login</a>
+          <button data-open = "loginModal" class="button custom">Login</button>
 
           <!-- <button id = "signup" type = "button" class = "button custom"> Sign up!</button>
           <button id = "login" type = "button" class = "button custom"> Login!</button> -->
@@ -20,3 +40,9 @@
       
 
     </div>
+
+    <script>
+
+      $(document).foundation();
+
+    </script>

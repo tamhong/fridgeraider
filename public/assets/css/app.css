@@ -1,10 +1,3 @@
-/* body {
-    background-image: url("../images/background.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-opacity: 50%;
-} */
-
 h1 {
     font-family: 'Cookie', cursive;
     color: white;
@@ -27,6 +20,28 @@ h1 {
     position: absolute;
     z-index: -1;   
     background-size: 100%;
+  }
+
+  .container-2 {
+    display: block;
+    position: relative;
+  }
+  
+  .container-2::after {
+    content: "";
+    background: url(../images/drawer.jpg);
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    background-size: 50%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    height: 100%;
+
   }
 
 .grid-x {
@@ -79,7 +94,29 @@ h1 {
 
 .callout {
     overflow-y: auto;
-    height: 125px;
+    height: 400px;
 }
 
+#addItem {
+    background-color: #f3c1be;
+    border-radius: 5px;
+}
 
+.card-divider {
+    background: #f3c1be;
+    font-family: 'Cookie', cursive;
+    font-size: 40px;
+    text-align: center;
+    line-height: 20px;
+}
+
+#makeRecipe {
+    color: black;
+    font-family: 'Cookie', cursive;
+    font-size: 24px;
+    
+}
+
+#makeRecipe:hover{
+    font-style: italic;
+}

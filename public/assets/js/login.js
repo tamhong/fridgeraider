@@ -8,10 +8,8 @@ $(function() {
 
         // $("#loginButton").attr("href", "/fridge/" + username);
         // $("#loginButton").trigger("click");
-
-        $.get("/fridge/" + username, function (data) {
-            console.log (data);
-        });
+        window.location.href="/fridge/"+username
+        
 
 
     });

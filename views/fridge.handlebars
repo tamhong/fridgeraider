@@ -8,19 +8,20 @@
 
         <div class= "grid-container">
 
-            <h1 style = "color: black">-fridge name-</h1>
+            <h1 style = "color: black">
+                {{userInfo.fridgeName}}
+            </h1>
             
             <div class = "grid-x">
 
                 <div class = "cell medium-4">
 
                     <div class="callout">
-                        <h5>Items</h5>
-                        <ul>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                        </ul>
+                        {{#each items}}
+
+                        {{itemName}} <br>
+
+                        {{/each}}
                     </div>
                     
 
@@ -35,6 +36,11 @@
                         </div>
                         <div class="card-section">
                             <form id = "addItemForm">
+                                
+                                <input id = "usernameInput" type = "hidden" value = {{userInfo.username}}>
+                               
+                                <input id = "userIdInput" type = "hidden" value={{userInfo.id}}>
+                                
                                 <label>Item Name 
                                     <input id = "itemName" type = "text" placeholder = "Lettuce">
                                 </label>
@@ -60,7 +66,6 @@
         <div class = "grid-x"> </div>
 
         <div class = "li-fit-2"></div>
-
 
 
     </div>  
