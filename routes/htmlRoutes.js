@@ -21,23 +21,51 @@ module.exports = function(app) {
     res.render("recipe");
   });
 
-  app.get("/fridge/:username", function(req, res) {
+  // app.get("/fridge", function(req, res) {
+  //   var user = req.params.username;
+
+    // db.Person.findOne({
+    //   where: {username: user},
+    //   attributes: ['id']}).then(
+    //     function(dbPerson) {
+    //       db.Items.findAll({
+    //         where: { PersonId : dbPerson.id}
+    //       }).then(
+    //         function(dbItems) {
+    //           console.log(dbItems);
+    //           res.render("fridge", dbItems);
+    //         }
+    //       )
+    //     }
+    //   );
+
+  app.get("/fridge/:username", function (req, res) {
+
     var user = req.params.username;
 
     db.Person.findOne({
-      where: {username: req.params.username },
-      attributes: ['id']}).then(
+      where: {username: user},
+      attributes: ['id', 'fridgeName', 'username']}).then(
         function(dbPerson) {
           db.Items.findAll({
             where: { PersonId : dbPerson.id}
           }).then(
             function(dbItems) {
-              res.render("fridge", dbItems);
+              // console.log(dbItems);
+              var hbsObject = {
+                items: dbItems,
+                userInfo: dbPerson.dataValues
+              };
+
+              console.log(hbsObject);
+
+              res.render("fridge", hbsObject);
             }
           )
         }
       );
-  });
+
+  })
   
   // Load example page and pass in an example by id
   // app.get("/items/:id", function(req, res) {

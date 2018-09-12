@@ -30,13 +30,7 @@ module.exports = function(app) {
       where: {username: req.params.username },
       attributes: ['id']}).then(
         function(dbPerson) {
-          db.Items.findAll({
-            where: { PersonId : dbPerson.id}
-          }).then(
-            function(dbItems) {
-              res.json(dbItems);
-            }
-          )
+          return dbPerson.id;
         }
       );
     // let userId = db.Person.findOne({where: { username: req.params.username }, attributes: ['id'] });

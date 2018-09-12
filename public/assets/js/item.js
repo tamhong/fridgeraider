@@ -1,7 +1,10 @@
+$(document).foundation();
+
 $(function() {
 
     $(document).ready(function() {
-        var username = "Tam-Hong";
+
+        var username = req.params.username;
 
         $.ajax("/api/items/" + username, {
             type: "GET"
@@ -16,8 +19,8 @@ $(function() {
 
         event.preventDefault()
 
-        var username = "Tam-Hong";
-
+        var username = $("#usernameInput").val().trim();
+        var userId = $("#userIdInput")
         var itemName = $("#itemName");
         var expDate = $("#expDate");
 
@@ -27,7 +30,7 @@ $(function() {
             itemName: itemName.val().trim(),
             expDate: expDate.val().trim(),
             category: "Produce",
-            PersonId: 1,
+            PersonId: parseInt(userId.val().trim())
         }
 
         $.ajax("/api/items/" + username, {
