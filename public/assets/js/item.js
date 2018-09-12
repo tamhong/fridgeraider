@@ -17,7 +17,7 @@ $(function() {
 
     $("#addItemForm").submit(function(event) {
 
-        event.preventDefault()
+        // event.preventDefault()
 
         var username = $("#usernameInput").val().trim();
         var userId = $("#userIdInput")
@@ -39,6 +39,7 @@ $(function() {
         }).then(
             function(res) {
                 res.json(newItem);
+                location.reload();
             }
         );
 

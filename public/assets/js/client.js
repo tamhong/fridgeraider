@@ -21,7 +21,7 @@ $(function() {
         }).then(
             function() {
                 console.log("created new person");
-                location.reload();
+                window.location.href = "/fridge/" + newPerson.username;
             }
         );
     });

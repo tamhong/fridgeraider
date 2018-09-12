@@ -4,6 +4,12 @@ h1 {
     font-size: 80px;
 }
 
+h2 {
+    font-family: 'Cookie', cursive;
+    color: black;
+    font-size: 60px;
+}
+
 .container {
     display: block;
     position: relative;
@@ -20,6 +26,11 @@ h1 {
     position: absolute;
     z-index: -1;   
     background-size: 100%;
+  }
+
+  .reveal {
+      border-radius: 10px;
+      border: dotted #de6c72 10px;
   }
 
   .container-2 {
@@ -97,7 +108,7 @@ h1 {
     height: 400px;
 }
 
-#addItem {
+.fridgePage {
     background-color: #f3c1be;
     border-radius: 5px;
 }

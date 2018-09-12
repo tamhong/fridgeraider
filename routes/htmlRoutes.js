@@ -1,4 +1,5 @@
 var db = require("../models");
+var moment = require('moment');
 
 module.exports = function(app) {
   // Load index page
@@ -58,6 +59,22 @@ module.exports = function(app) {
               };
 
               console.log(hbsObject);
+
+            //  Moment Format Date YYYY-MM-DDThh:mm:ss.SSSZ
+
+            // for (let i = 0; i < hbsObject.items.length; i++) {
+            //   hbsObject.items[i].expDate = moment(hbsObject.items[i].expDate.toString(), 'YYYY-MM-DDTHH:MM:SS.SSSZ').format('MMM Do YY');
+
+            //   console.log(hbsObject.items[i].expDate);
+              
+            // };
+
+              // for (let i = 0; i < hbsObject.items.length; i++) {
+              //   hbsObject.items[i].expDate = moment((hbsObject.items[i].expDate).utc()).format('MMM Do YY');
+
+              //   console.log(hbsObject.items[i].expDate);
+                
+              // };
 
               res.render("fridge", hbsObject);
             }
