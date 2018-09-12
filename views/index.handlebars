@@ -6,11 +6,32 @@
       <div class = "grid-x">
         <div class = "cell large-12 text-center">
 
+        <!--Signup Modal-->
+
+        <div class="tiny reveal text-center" id="signupModal" data-reveal>
+            
+            <h2>sign up</h2>
+
+              <form id = "signupForm"> 
+
+                  <input id = "usernameSu" class = "signup" type = "text" placeholder= "Username, ie. johndoe6">
+                  <input id = "fridgenameSu" class = "signup" type = "text" placeholder= "Fridgename, ie. doe-family">
+                  <input id = "phone" class = "signup" type = "text" placeholder= "Phone number, ie. 0123456789">
+                  <input id = "email" class = "signup" type = "text" placeholder= "Email, ie johndoe@gmail.com">
+
+                  <button id = "signupSub" class="button custom">Sign up</button>
+
+              </form>
+
+        </div>
+
+        <!-- End Sign up Modal-->
+
         <!--Login Modal-->
 
-        <div class="reveal text-center" id="loginModal" data-reveal>
+        <div class="tiny reveal text-center" id="loginModal" data-reveal>
 
-            <h1 style = "color:black">open your fridge.</h1>
+            <h2>open your fridge.</h2>
             
             <form id = "loginForm">
 
@@ -26,8 +47,8 @@
         <!-- End Login Modal-->
 
           <h1>fridgeraider.</h1>
-          <a href="/signup" class="button custom">Sign up</a>
-          <button data-open = "loginModal" class="button custom">Login</button>
+          <button data-open = "signupModal" class="button custom">Sign up</button>
+          <button data-open = "loginModal" class="button custom">Log in</button>
 
           <!-- <button id = "signup" type = "button" class = "button custom"> Sign up!</button>
           <button id = "login" type = "button" class = "button custom"> Login!</button> -->
