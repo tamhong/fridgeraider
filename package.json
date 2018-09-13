@@ -1,5 +1,5 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "handlebars-boilerplate",
   "version": "1.0.0",
   "description": "Project 2 Starter",
   "main": "server.js",
@@ -21,6 +21,7 @@
     "express-handlebars": "^3.0.0",
     "moment": "^2.22.2",
     "mysql2": "^1.5.3",
+    "npm": "^6.4.1",
     "sequelize": "^4.38.0"
   },
   "devDependencies": {
@@ -31,5 +32,17 @@
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamhong/fridgeraider.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/tamhong/fridgeraider/issues"
+  },
+  "homepage": "https://github.com/tamhong/fridgeraider#readme"
 }
