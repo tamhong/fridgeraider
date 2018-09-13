@@ -22,7 +22,7 @@ function getRecipeId(ing1, ing2) {
     ing1 +
     "&allowedIngredient[]=" +
     ing2 +
-    "&requirePictures=true&maxResult=4";
+    "&requirePictures=true&maxResult=3";
 
   $.get(queryUrl, function(body) {
     var matches = body.matches;
@@ -67,6 +67,7 @@ function getRecipeId(ing1, ing2) {
 
           $("#recipeCards").append("<div>");
           var recipeName = $("<h5>" + title);
+          recipeName.attr("id", "headlineh5");
           recipeName.attr("style", "height: 100px");
           recipeName.append(title);
           div.append(recipeName);
@@ -84,9 +85,10 @@ function getRecipeId(ing1, ing2) {
           ingredients.append(ingredientLines);
           div.append(ingredients);
 
-          var sourceUrl = $("<a href>");
+          var sourceUrl = $("<a>");
           sourceUrl.append("<h3>Recipe Source</h3>");
-          sourceUrl.attr("class", "menu");
+          sourceUrl.attr("href", source);
+          sourceUrl.attr("class", "menu2");
           sourceUrl.attr("target", "_blank");
           sourceUrl.append(source);
           div.append(sourceUrl);

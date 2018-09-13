@@ -84,12 +84,12 @@
     background-size: 100%;
   }
 
-  h1 {
+  #recipeh1 {
     font-family: 'Cookie', cursive;
     color: black;
     font-size: 80px;
 }
-.menu {
+.menu2 {
     padding: 10px 30px;
     background-color:  #de6c72;
     color: black;
