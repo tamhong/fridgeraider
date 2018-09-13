@@ -3,7 +3,7 @@
     <div class = "container-2">
 
         <ul class = "menu align-right">
-            <li><a id = "makeRecipe" href="#">Make a recipe >></a></li>
+            <li><a id = "makeRecipe" href="/recipe">Make a recipe >></a></li>
         </ul>
 
         <div class= "grid-container">
@@ -28,15 +28,21 @@
 
                             {{#each items}}
 
-                            <tr>
+                            {{#if this.used}}
 
-                                <td>{{itemName}}</td>
+                            {{else}}
 
-                                <td>{{expDate}}</td> 
+                                <tr>
 
-                                <td><button id = "used" type = "button" class = "button fridgePage"> Used </button></td>
+                                    <td>{{itemName}}</td>
 
-                            </tr>
+                                    <td>{{expDate}}</td> 
+
+                                    <td><button data-id = "{{this.id}}" type = "button" class = "button fridgePage use"> Use </button></td>
+
+                                </tr>
+
+                            {{/if}}
 
                             {{/each}}
 
@@ -56,9 +62,9 @@
                         <div class="card-section">
                             <form id = "addItemForm">
                                 
-                                <input id = "usernameInput" type = "hidden" value = {{userInfo.username}}>
+                                <input id = "usernameInput" type = "hidden" value = "{{userInfo.username}}">
                                
-                                <input id = "userIdInput" type = "hidden" value={{userInfo.id}}>
+                                <input id = "userIdInput" type = "hidden" value="{{userInfo.id}}">
                                 
                                 <label>Item Name 
                                     <input id = "itemName" type = "text" placeholder = "Lettuce">

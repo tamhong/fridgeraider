@@ -22,7 +22,7 @@ function getRecipeId(ing1, ing2) {
     ing1 +
     "&allowedIngredient[]=" +
     ing2 +
-    "&requirePictures=true&maxResult=3";
+    "&requirePictures=true&maxResult=6";
 
   $.get(queryUrl, function(body) {
     var matches = body.matches;

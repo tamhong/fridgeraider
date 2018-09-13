@@ -32,6 +32,12 @@ module.exports = function (sequelize, DataTypes) {
 				allowNull: false,
 				required: true,
 				defaultValue: false
+			},
+			used: {
+				type: DataTypes.BOOLEAN,
+				allowNull: false,
+				required: true,
+				defaultValue: false
 			}
 		}, {
 
@@ -50,3 +56,4 @@ module.exports = function (sequelize, DataTypes) {
 
 	return Items;
 };
+

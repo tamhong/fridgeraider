@@ -56,4 +56,22 @@ $(function() {
 
 
     });
+
+    $(".use").on("click", function (event) {
+        var id = $(this).data("id");
+
+        var newUseState = {
+            used: 1
+        };
+
+        $.ajax("/api/items/" + id, {
+            type: "PUT",
+            data: newUseState
+        }).then(
+            function() {
+                console.log("Item #" + id + "used.");
+                location.reload();
+            }
+        );
+    });
 });
