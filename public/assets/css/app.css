@@ -1,3 +1,9 @@
+#index-content {
+    position: relative;
+    top: 50px;
+    vertical-align: middle;
+}
+
 h1 {
     font-family: 'Cookie', cursive;
     color: white;
@@ -11,10 +17,12 @@ h2 {
 }
 
 .container {
-    display: block;
-    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
+
   .container::after {
     content: "";
     background: url(../images/background-2.jpg);
@@ -27,6 +35,7 @@ h2 {
     z-index: -1;   
     background-size: 100%;
   }
+  
 
   .reveal {
       border-radius: 10px;
@@ -36,6 +45,7 @@ h2 {
   .container-2 {
     display: block;
     position: relative;
+    height: 100vh;
   }
   
   .container-2::after {
@@ -49,6 +59,7 @@ h2 {
     position: absolute;
     z-index: -1;   
     background-size: 50%;
+    height: 50vh;
     background-position: top left;
     background-repeat: no-repeat;
     height: 100%;
