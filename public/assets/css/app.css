@@ -122,6 +122,13 @@ h2 {
 .fridgePage {
     background-color: #f3c1be;
     border-radius: 5px;
+    color:black
+}
+
+.fridgePage:hover{
+    background-color: #f3c1be;
+    opacity: 0.8;
+    color: black;
 }
 
 .card-divider {
