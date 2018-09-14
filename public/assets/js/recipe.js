@@ -18,7 +18,7 @@ $(document).ready(function() {
 function getRecipeId(ing1, ing2) {
 
   var queryUrl =
-    "http://api.yummly.com/v1/api/recipes?_app_id=108507b6&_app_key=dc94d5f4c0691f5dc5db17fb6deb0ca4&q=" +
+    "https://api.yummly.com/v1/api/recipes?_app_id=108507b6&_app_key=dc94d5f4c0691f5dc5db17fb6deb0ca4&q=" +
     ing1 +
     "&allowedIngredient[]=" +
     ing2 +
