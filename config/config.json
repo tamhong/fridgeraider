@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
 
-    "password": "",
+    "password": "password12345",
     "database": "fridgeraider_db",
 
     "host": "localhost",

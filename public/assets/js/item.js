@@ -2,7 +2,7 @@ $(document).foundation();
 
 $(function() {
   $(document).ready(function() {
-    var username = req.params.username;
+    var username = $("#usernameInput").val().trim();
 
     $.ajax("/api/items/" + username, {
       type: "GET"
