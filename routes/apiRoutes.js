@@ -7,10 +7,30 @@ module.exports = function(app) {
     });
   });
 
+  // app.get("/api/persons/:username", function(req, res) {
+  //   db.Person.findOne({ where: {username: req.body.username}}).then(function(result) {
+  //     if(result && result.dataValues){
+  //       res.json(dbPerson);
+  //     } else {
+  //       return res.json({Error: "Username does not exists!"});
+  //     }
+  //   });
+  // });
+
   app.post("/api/persons", function(req, res) {
-    db.Person.create(req.body).then(function(dbPerson) {
-      res.json(dbPerson);
+    db.Person.findOne({ where: {username: req.body.username}}).then(function(result) {
+      if(result && result.dataValues){
+        res.status(400);
+        return res.json({Error: "Username exists!"});
+      } else {
+        db.Person.create(req.body).then(function (dbPerson) {
+          res.json(dbPerson);
+        });
+      }
     });
+    // db.Person.create(req.body).then(function(dbPerson) {
+    //   res.json(dbPerson);
+    // });
   });
 
   app.delete("/api/persons/:id", function(req, res) {
