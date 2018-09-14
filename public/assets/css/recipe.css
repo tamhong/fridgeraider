@@ -114,3 +114,9 @@ h3 {
 a href {
     font-size: 16px;
 }
+
+.containerOne {
+    width: 85%;
+    margin: 0 auto;
+}
+
