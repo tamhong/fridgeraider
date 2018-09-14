@@ -1,7 +1,9 @@
 $(function() {
     $("#signupForm").submit(function() {
 
-        event.preventDefault()
+        event.preventDefault();
+
+        $(".error").empty();
 
         var usernameInput = $("#usernameSu");
         var fridgeInput = $("#fridgenameSu");
@@ -18,12 +20,30 @@ $(function() {
         $.ajax("/api/persons", {
             type: "POST",
             data: newPerson,
-        }).then(
-            function() {
+            success: function (data, text) {
                 console.log("created new person");
                 window.location.href = "/fridge/" + newPerson.username;
+            },
+            error: function (request, status, error) {
+                var error = $("<p>");
+                error.attr("class", "error");
+                error.attr("style", "color: red");
+                error.append("Please select a different username.");
+                $("#signupForm").append(error);
             }
-        );
+        })
+        
+        
+        // .then(
+        //     function(err) {
+        //         if (err) {
+        //             $("#signupModal").append("Please select a different username.")
+        //         } else {
+        //             console.log("created new person");
+        //             window.location.href = "/fridge/" + newPerson.username;
+        //         }
+        //     }
+        // );
     });
 });
 

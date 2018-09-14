@@ -18,7 +18,7 @@ module.exports = function (sequelize, DataTypes) {
 				required: true
 			},
 			expDate: {
-				type: DataTypes.DATE,
+				type: DataTypes.DATEONLY,
 				allowNull: false,
 				required: true
 			},
