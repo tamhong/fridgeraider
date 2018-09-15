@@ -1,6 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Person = sequelize.define(
-    "Person", {
+    "Person", 
+    {
       id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -29,7 +30,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     {
       tableName: "Person"
-    });
+    }
+  );
 
   Person.associate = function(models) {
     Person.hasMany(models.Items, {

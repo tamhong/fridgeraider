@@ -7,16 +7,6 @@ module.exports = function(app) {
     });
   });
 
-  // app.get("/api/persons/:username", function(req, res) {
-  //   db.Person.findOne({ where: {username: req.body.username}}).then(function(result) {
-  //     if(result && result.dataValues){
-  //       res.json(dbPerson);
-  //     } else {
-  //       return res.json({Error: "Username does not exists!"});
-  //     }
-  //   });
-  // });
-
   app.post("/api/persons", function(req, res) {
     db.Person.findOne({ where: { username: req.body.username } }).then(function(
       result
@@ -30,9 +20,6 @@ module.exports = function(app) {
         });
       }
     });
-    // db.Person.create(req.body).then(function(dbPerson) {
-    //   res.json(dbPerson);
-    // });
   });
 
   app.delete("/api/persons/:id", function(req, res) {
@@ -52,13 +39,6 @@ module.exports = function(app) {
     }).then(function(dbPerson) {
       return dbPerson.id;
     });
-    // let userId = db.Person.findOne({where: { username: req.params.username }, attributes: ['id'] });
-
-    // console.log(userId);
-
-    // db.Items.findAll({ where: { PersonId: userId} }).then(function(dbItems) {
-    //   res.json(dbItems)
-    // });
   });
 
   app.post("/api/items/:username", function(req, res) {
