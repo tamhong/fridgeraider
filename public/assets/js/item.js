@@ -1,16 +1,6 @@
 $(document).foundation();
 
 $(function() {
-  // $(document).ready(function() {
-  //   // var username = $("#usernameInput").val().trim();
-
-  //   $.ajax("/api/items/Tam-Hong", {
-  //     type: "GET"
-  //   }).then(function(res) {
-  //     console.log(res);
-  //   });
-  // });
-
   $("#addItemForm").submit(function(event) {
     // event.preventDefault()
 
@@ -37,16 +27,6 @@ $(function() {
       res.json(newItem);
       location.reload();
     });
-
-    // var username = "Tam-Hong";
-
-    // $.ajax("/api/items/" + username, {
-    //     type: "GET"
-    // }).then(
-    //     function(res) {
-    //         console.log(res);
-    //     }
-    // );
   });
 
   $(".use").on("click", function(event) {
