@@ -30,9 +30,9 @@ var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
-if (process.env.NODE_ENV === "test" || process.env.NODE_ENV === "production") {
-  syncOptions.force = true;
-}
+// if (process.env.NODE_ENV === "test" || process.env.NODE_ENV === "production") {
+//   syncOptions.force = false;
+// }
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
