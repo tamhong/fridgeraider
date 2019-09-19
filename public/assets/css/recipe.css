@@ -1,122 +1,118 @@
-
 .basic-card {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: 1rem;
-    border: 1px solid #e6e6e6;
-    border-radius: 0;
-    background: #fefefe;
-    box-shadow: none;
-    overflow: hidden;
-    color: #0a0a0a;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    margin: 20px 30px 90px 30px;
-    width: 50%;
-    
-    float: left;
-  }
-  .row {
-      width: 80%;
-      margin: 0 auto;
-  }
-  
-  .basic-card > :last-child {
-    margin-bottom: 0;
-  }
-  img {
-    opacity: 0.6;
-  }
-  img:hover {
-      opacity: 1.0;
-  }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 0;
+  background: #fefefe;
+  box-shadow: none;
+  overflow: hidden;
+  color: #0a0a0a;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 20px auto;
+  width: 30%;
+}
+.row {
+  width: 100%;
+}
+.container-4 {
+  margin: auto;
+  width: 80%;
+}
 
-  h5 {
-    font-family: 'Cookie', cursive;
-    color: black;
-    font-size: 40px;
-    text-align: center;
-    height: 50px;
+.basic-card > :last-child {
+  margin-bottom: 0;
+}
+img {
+  opacity: 0.6;
+}
+img:hover {
+  opacity: 1;
+}
 
-  }
-  p {
-      padding: 30px;
-      margin-bottom: 20px;
-  }
+h5 {
+  font-family: 'Cookie', cursive;
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  height: 50px;
+}
+p {
+  padding: 30px;
+  margin-bottom: 20px;
+}
 
-  
-  .basic-card-image {
-    grid-row-end: 4;
-    -ms-grid-row: 1;
-        grid-row-start: 1;
-  } 
-  
-  .basic-card-image img {
-    width: 100%;
-  }
-   
- .basic-card-content {
-    border: 0;
-    grid-row-start: 3 / 4;
-    margin: 0;
-    overflow: scroll;
-  }
+.basic-card-image {
+  grid-row-end: 4;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+}
 
- 
-  .container-3 {
-    height: 50vh;
-    align-items: center;
-    justify-content: center;
-  }
+.basic-card-image img {
+  width: 100%;
+}
 
-  .container-3::after {
-    height: 50vh;
-    content: "";
-    background: url(../images/background-2.jpg);
-    opacity: 0.6;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-    background-size: 100%;
-  }
+.basic-card-content {
+  border: 0;
+  grid-row-start: 3 / 4;
+  margin: 0;
+  overflow: scroll;
+}
+.containerOne {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
-  #recipeh1 {
-    font-family: 'Cookie', cursive;
-    color: white;
-    font-size: 80px;
+.container-3 {
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.container-3::after {
+  height: 50vh;
+  content: '';
+  background: url(../images/background-2.jpg);
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-size: 100%;
+}
+
+#recipe h1 {
+  font-family: 'Cookie', cursive;
+  color: white;
+  font-size: 80px;
 }
 .menu2 {
-    padding: 10px 30px;
-    background-color:  #de6c72;
-    color: black;
-    height:150px;
+  padding: 10px 30px;
+  background-color: #de6c72;
+  color: black;
+  height: 150px;
 }
 
 h3 {
-    font-family: 'Cookie', cursive;
-    
-    color: white;
-    font-size: 30px;
-    
+  font-family: 'Cookie', cursive;
+
+  color: white;
+  font-size: 30px;
 }
 
 a href {
-    font-size: 16px;
+  font-size: 16px;
 }
-
-.containerOne {
-    width: 85%;
-    margin: 0 auto;
-}
-
